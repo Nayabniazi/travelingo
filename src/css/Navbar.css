@@ -1,0 +1,368 @@
+.navbar {
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #151414;
+  color: white;
+  position: fixed;
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1003; /* Ensures navbar is always on top */
+}
+
+
+/* Logo Styling */
+.logo img {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  
+  height: 100px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Space between links */
+  flex: 1; /* Allow nav-links to take available space */
+  justify-content: center; /* Center the nav links */
+ 
+}
+
+/* Individual Navigation Item */
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a, .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-links a:hover, .nav-link:hover {
+  color: #f1c40f;
+ 
+}
+
+/* Home Submenu */
+.submenu {
+  gap: 25px;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.submenu-left, .submenu-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.submenu a {
+  display: block;
+  color: black;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.submenu a:hover {
+  background: #f1c40f;
+  color: white;
+  border-radius: 3px;
+}
+/* Dropdown Menu - General */
+.dropdown-menu {
+  position: absolute;
+  background: white; /* White background for dropdown */
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show dropdown when parent is active */
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Links */
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+  background: #FF7F00; /* Orange hover effect */
+  color: white;
+  border-radius: 5px;
+}
+
+/* Positioning the dropdowns correctly */
+.nav-item {
+  position: relative;
+}
+
+/* My Account Button */
+.account-btn {
+  margin-left: 250px;
+  background: #f1c40f;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px; 
+
+}
+
+.account-btn:hover {
+  background: #e1b70f;
+}
+
+/* Button Container */
+.navbar .button-container {
+  margin-left: auto; /* Align button to the right */
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+.menu-icon .bar {
+
+  width: 30px;
+  height: 4px;
+  background: white;
+ 
+}
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: #333;
+    z-index: 1000; /* Ensures nav is above other elements */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .submenu {
+    position: relative;
+    z-index: 1001; /* Ensures submenu is above other elements */
+  }
+
+  .menu-icon {
+    position: relative;
+    z-index: 1002; /* Ensures menu button is clickable */
+  }
+
+  .account-btn {
+    position: relative;
+    z-index: 1002; /* Prevents button from overlapping menu */
+  }
+
+  /* Ensure no overlapping of content */
+  .navbar {
+    position: relative;
+    z-index: 1003;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    background: #000000;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /* Submenu for Home on Mobile */
+  .submenu {
+    position: static;
+    width: 100%;
+    flex-direction: column;
+    background: #444;
+  }
+
+  .submenu-left, .submenu-right {
+    width: 100%;
+  }
+
+  .submenu a {
+    color: white;
+    padding: 10px;
+  }
+
+  /* Center Account Button */
+  .nav-links li button.account-btn {
+    margin-top: 10px;
+  }
+  .account-btn {
+    background: #f1c40f;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px; margin-left: 0px;
+  
+  }
+
+
+  /* Responsive Logo */
+  .logo img {
+    height: 50px; /* Reduced size on mobile */
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .logo img {
+    margin-left: 0px;
+    height: 75px; /* Further reduce size for smaller screens */
+  }
+}
+
+
+
+
+/* Dropdown Styling */
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+}
+
+.nav-link:hover {
+  color: #f4a261;
+}
+
+/* Dropdown Menu Base */
+.about-dropdown-menu,
+.services-dropdown-menu {
+  position: absolute;
+  background: white;
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 0;
+  list-style: none;
+}
+
+.about-dropdown-menu li,
+.services-dropdown-menu li {
+  color: #000;
+  padding: 10px 15px;
+
+}
+
+.about-dropdown-menu li:last-child,
+.services-dropdown-menu li:last-child {
+  border-bottom: none;
+
+}
+
+.about-dropdown-menu a,
+.services-dropdown-menu a {
+  
+  color: rgb(0, 0, 0);
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+
+.about-dropdown-menu a:hover,
+.services-dropdown-menu a:hover {
+  background: #ffd746;
+  color: #ffffff;
+  height: 50px;
+  
+}
+
+/* Show dropdown when active */
+.about-dropdown:hover .about-dropdown-menu,
+.services-dropdown:hover .services-dropdown-menu {
+  display: flex;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .about-dropdown-menu,
+  .services-dropdown-menu {
+    position: static;
+    display: block;
+    background: none;
+    width: 100%;
+  }
+
+  .about-dropdown-menu li,
+  .services-dropdown-menu li {
+    padding-left: 20px;
+    border-bottom: none;
+  }
+}
+
