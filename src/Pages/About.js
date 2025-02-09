@@ -38,7 +38,7 @@ return(
 <>
 
 
-<Header imgSrc="/imgs/Header.png" h1="Book your chauffeurrr service" />
+<Header imgSrc="/imgs/Header.png" h1="Book your chauffeur service" />
 <ParagraphSection
         sections={sectionsData}
         containerStyle={{ marginLeft: "150px", marginRight: "150px", marginTop: "100px" }}
