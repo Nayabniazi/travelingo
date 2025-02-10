@@ -133,7 +133,7 @@ return(
 <h2 style={{marginLeft:'150px',marginTop:'0px'}}>
 
 </h2>
-<div className="card-container"style={{marginLeft:'150px',marginRight:'180px',marginTop:'10px'}}>
+<div className="card-container"style={{marginLeft:'150px',marginRight:'150px',marginTop:'10px'}}>
 
 {isNewPopupOpen && (
         <div className="new-popup-overlay" style={{ marginTop: "0px" }}>

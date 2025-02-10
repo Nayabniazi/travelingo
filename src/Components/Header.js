@@ -216,7 +216,7 @@ const Header = ({ imgSrc, h1 }) => {
         backgroundRepeat: "no-repeat",
         width: "100%", 
         height: "150vh" }}>
-  <div className="top-buttons">
+  <div className="top-buttons" style={{backgroundColor:'none'}}>
         <button className="top-btn" onClick={() => handleButtonClick("chauffeur")}>
           Chauffeur
         </button>
@@ -1403,7 +1403,7 @@ Stay tuned and get ready to redefine your travel experience with Bookinglane!{ac
 /* Submit Button */
 .top-btn {
   width: 100%;
-  background: rgba(57, 53, 53, 0.9);
+ background: rgba(1, 0, 0, 0.5);
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -1423,6 +1423,7 @@ Stay tuned and get ready to redefine your travel experience with Bookinglane!{ac
   }
 
   .top-btn {
+  background: rgba(0, 0, 0, 0.5);
     width: 100%;
   }
 }
@@ -1580,7 +1581,7 @@ Stay tuned and get ready to redefine your travel experience with Bookinglane!{ac
     margin-left:25px;
     border-radius: 100px;
     width: 30%;
-    background-color: rgba(39, 30, 30, 0.8);
+    
     display: flex;
     justify-content: center; /* Center buttons */
     gap: 1rem;

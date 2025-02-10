@@ -70,20 +70,25 @@ const Navbar = () => {
             Service
           </span>
           {activeDropdown === "service" && (
-            <ul className="dropdown-menu">
+            <ul className="submenu">
+               <div className="submenu-left">
               <li><Link to="/Airport">Airport Transfer</Link></li>
               <li><Link to="/Coprate">Corporate Transfer</Link></li>
               <li><Link to="/Grouptravel">Group Travel</Link></li>
               <li><Link to="/Intercity">Innercity and intercity rides</Link></li>
               <li><Link to="/Tour">Special Tour</Link></li>
               <li><Link to="/about">Solution</Link></li>
-              <li><Link to="/Solution">Car Rental</Link></li>
+             
+              </div>
+              <div className="submenu-right">
               <li><Link to="/Chaufur">Chauffeur Service</Link></li>
               <li><Link to="/Limo">Limo Services</Link></li>
               <li><Link to="/Topdestination">Top Destination</Link></li>
               <li><Link to="/TopRoutes">Top Routes</Link></li>
               <li><Link to="/Van">Van Service</Link></li>
               <li><Link to="/Ski">Ski Transfer</Link></li>
+              <li><Link to="/Solution">Car Rental</Link></li>
+              </div>
             </ul>
           )}
         </li>
@@ -94,9 +99,11 @@ const Navbar = () => {
             Solutions
           </span>
           {activeDropdown === "solutions" && (
-            <ul className="dropdown-menu">
+            <ul className="submenu">
+            
               <li><Link to="/platform">Corporate Transportation Platform</Link></li>
               <li><Link to="/Login">Drive with Us</Link></li>
+             
             </ul>
           )}
         </li>

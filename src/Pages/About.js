@@ -20,25 +20,14 @@ import Reviews  from "../Components/Reviews.js";
 const About = () => {
    // Define the content sections
    const sectionsData = [
-    {
-      heading: "Get Your World-class Chauffeur Service",
-      content: "There is never more easy planning your transportation. Showing a refined reserve system...",
-    },
-    {
-      heading: "Reliability and Safety",
-      content: "Our customers can rely on consistent and comfortable trips from well-trained chauffeurs...",
-    },
-    {
-      heading: "Customizable Fleet Solutions",
-      content: "Our consumers choose Vans, SUVs, and business sedans among other choices...",
-    },
+  
   ];
 return(
 
 <>
 
 
-<Header imgSrc="/imgs/Header.png" h1="Book your chauffeur service" />
+<Header imgSrc="/imgs/subcar.png" h1="Book your chauffeur service" />
 <ParagraphSection
         sections={sectionsData}
         containerStyle={{ marginLeft: "150px", marginRight: "150px", marginTop: "100px" }}

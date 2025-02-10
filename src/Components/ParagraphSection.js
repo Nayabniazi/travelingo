@@ -56,6 +56,11 @@ const ParagraphSection = ({ sections, containerStyle }) => {
 
         /* ✅ Mobile: Margin Left = 0px & Centered */
         @media (max-width: 768px) {
+        .layout-container {
+       
+          padding: 20px;
+          font-family: Arial, sans-serif;
+        }
           .content-row {
             flex-direction: column;
             text-align: center;

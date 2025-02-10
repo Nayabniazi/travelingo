@@ -33,6 +33,7 @@ margin-left:100px;
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-left:0px;
   }
 `;
 

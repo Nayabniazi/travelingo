@@ -42,7 +42,7 @@ return(
 <CardSection />
 <ParagraphSection
         sections={sectionsData}
-        containerStyle={{ marginLeft: "150px", marginRight: "150px", marginTop: "100px" }}
+        containerStyle={{  marginTop: "100px" }}
       />
 
 <Reviews />
